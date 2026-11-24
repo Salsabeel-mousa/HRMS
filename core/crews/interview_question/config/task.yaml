@@ -1,0 +1,67 @@
+
+interview_question_task:
+  description: >
+    Analyze the following candidate information:
+
+    Candidate Resume:
+    {candidate_resume}
+
+    Job Title:
+    {job_title}
+
+    Job Description:
+    {job_description}
+
+    Screening Report:
+    {screening_report}
+
+    Based on this information, generate three groups of
+    tailored interview questions:
+
+    1. Technical Questions:
+       Create questions to verify the candidate's technical
+       skills and knowledge required for the role.
+       Pay special attention to missing or weak skills
+       identified in the screening report.
+
+    2. Behavioral Questions:
+       Create questions to assess the candidate's soft skills,
+       communication, teamwork, problem-solving abilities,
+       and suitability for the role.
+
+    3. Follow-up Questions:
+       Create specific questions that explore the candidate's
+       previous experiences, clarify unclear information,
+       and investigate gaps or inconsistencies in the resume
+       or screening report.
+
+    Ensure that all questions are relevant to the candidate
+    and the target job role. Avoid generic or repetitive questions.
+
+    Return the result as a valid JSON object with exactly
+    three keys: technical_questions, behavioral_questions,
+    and follow_up_questions. Each key must contain a list
+    of strings.
+
+  expected_output: >
+    A valid JSON object in the following structure:
+
+    {
+      "technical_questions": [
+        "Question 1",
+        "Question 2"
+      ],
+      "behavioral_questions": [
+        "Question 1",
+        "Question 2"
+      ],
+      "follow_up_questions": [
+        "Question 1",
+        "Question 2"
+      ]
+    }
+
+    Each value must be a list of strings containing
+    interview questions.
+
+  agent: interview_question_generator
